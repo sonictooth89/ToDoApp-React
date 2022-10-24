@@ -37,7 +37,7 @@ const TaskList = (props) => {
     return (
         <>
             <div className='active'>
-            <h1>ZADANIA DO ZROIBIENIA</h1>
+            <h1>ZADANIA DO ZROBIENIA</h1>
             {activeTasks.length > 0 ? activeTasks : <p>Brak zadan, ale jestes szczesciarzem!</p>}
         </div>
 

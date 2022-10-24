@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'; // imrc
 import './AddTask.css'
 
@@ -49,7 +50,7 @@ class AddTask extends Component {
         let maxDate = this.minDate.slice(0, 4) * 1 + 1; // wyciecie stringa * jeden daje liczbe
         //console.log(maxDate)
         maxDate = maxDate + "-12-31";
-
+        
         return (
             <div className="form">
                 <input type="text" placeholder='dodaj zadanie' value={this.state.text} onChange={this.handleText}/>
@@ -57,7 +58,9 @@ class AddTask extends Component {
                 <label htmlFor="important">Priorytet</label><br />
                 <label htmlFor="date">Do kiedy zrobic</label>
                 <input type="date" value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handleDate}/>
-                <button onClick={this.handleClick}>Dodaj</button>
+                <button className="btn" onClick={this.handleClick}>
+                    Dodaj
+                    </button>
                 <hr />
             </div>
         );
